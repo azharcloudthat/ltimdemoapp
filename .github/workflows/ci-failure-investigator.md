@@ -4,7 +4,7 @@ on:
     workflows: ["CI"]
     types: [completed]
     branches:
-      - main
+      - develop
       - demo
     conclusion: [failure]
 engine:
@@ -20,6 +20,26 @@ safe-outputs:
     target: "*"
     max: 1
 timeout-minutes: 10
+
+tools:
+  github:
+    toolsets: [default]
+
+mcp-servers:
+  microsoftdocs:
+    url: "https://learn.microsoft.com/api/mcp"
+    allowed:
+      - microsoft_docs_search
+      - microsoft_docs_fetch
+      - microsoft_code_sample_search
+
+
+network:
+  allowed:
+    - defaults
+    - learn.microsoft.com
+    - "*.tavily.com"
+    - "*.atlassian.net"
 ---
 
 # CI Failure Investigator (plan, act, evaluate loop)
@@ -74,4 +94,4 @@ Post exactly one comment on the pull request:
 **Evaluation**
 (checks passed, and what you changed)
 
-Next step for the author: apply the fix and push. CI reruns and is the final check.
+Fetch Microsoft docs. for including differnt models in CI files to improve predictions. Next step for the author: apply the fix and push. CI reruns and is the final check.
