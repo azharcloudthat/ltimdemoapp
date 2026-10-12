@@ -4,7 +4,7 @@ on:
     workflows: ["CI"]
     types: [completed]
     branches:
-      - main
+      - develop
       - demo
     conclusion: [failure]
 engine:
@@ -94,4 +94,4 @@ Post exactly one comment on the pull request:
 **Evaluation**
 (checks passed, and what you changed)
 
-Next step for the author: apply the fix and push. CI reruns and is the final check.
+Fetch Microsoft docs. for including differnt models in CI files to improve predictions. Next step for the author: apply the fix and push. CI reruns and is the final check.
