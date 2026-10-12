@@ -2,7 +2,7 @@
 
 A Flask app that looks up a city and displays its current weather. It uses the Open-Meteo geocoding and forecast APIs; no API key is required.
 
-## Run locally with in your PC/Laptop
+## Run locally with in your PC/Laptop - LTIM
 
 You need Python 3.9 or later.
 
