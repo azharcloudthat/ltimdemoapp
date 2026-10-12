@@ -20,6 +20,26 @@ safe-outputs:
     target: "*"
     max: 1
 timeout-minutes: 10
+
+tools:
+  github:
+    toolsets: [default]
+
+mcp-servers:
+  microsoftdocs:
+    url: "https://learn.microsoft.com/api/mcp"
+    allowed:
+      - microsoft_docs_search
+      - microsoft_docs_fetch
+      - microsoft_code_sample_search
+
+
+network:
+  allowed:
+    - defaults
+    - learn.microsoft.com
+    - "*.tavily.com"
+    - "*.atlassian.net"
 ---
 
 # CI Failure Investigator (plan, act, evaluate loop)
