@@ -56,7 +56,7 @@ def weather():
                 "latitude": place["latitude"],
                 "longitude": place["longitude"],
                 "current": "temperature_2m,apparent_temperature,"
-                "relative_humidity_2m,wind_speed_10m,weather_code,is_day",
+                "relative_humidity_2m,wind_speed_10m,weather_code",
             },
             timeout=TIMEOUT,
         )
@@ -73,8 +73,6 @@ def weather():
         "feels_like": current["apparent_temperature"],
         "humidity": current["relative_humidity_2m"],
         "wind_speed": current["wind_speed_10m"],
-        "weather_code": current["weather_code"],
-        "is_day": bool(current.get("is_day", 1)),
         "description": WMO_CODES.get(current["weather_code"], "Unknown"),
     })
 
