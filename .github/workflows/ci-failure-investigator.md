@@ -21,9 +21,6 @@ safe-outputs:
     max: 1
 timeout-minutes: 10
 
-tools:
-  github:
-    toolsets: [default]
 
 mcp-servers:
   microsoftdocs:
