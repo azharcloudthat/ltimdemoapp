@@ -5,6 +5,7 @@ on:
     types: [completed]
     branches:
       - main
+      - demotcs
     conclusion: [failure]
 engine:
   id: copilot
