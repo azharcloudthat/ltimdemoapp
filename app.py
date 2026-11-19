@@ -32,6 +32,11 @@ def index():
     return render_template("index.html")
 
 
+@app.get("/health")
+def health():
+    return jsonify({"status": "ok"})
+
+
 @app.get("/weather")
 def weather():
     city = request.args.get("city", "").strip()

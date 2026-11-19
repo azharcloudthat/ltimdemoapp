@@ -16,6 +16,12 @@ class WeatherAppTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b"LTIMindtree Weather Dashboard", response.data)
 
+    def test_health_returns_ok_status(self):
+        response = self.client.get("/health")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.get_json(), {"status": "ok"})
+
     @patch("app.requests.get")
     def test_rejects_invalid_city_names(self, get):
         for city in ("", "A", "x" * 101):

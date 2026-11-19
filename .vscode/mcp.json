@@ -1,11 +1,8 @@
 {
   "servers": {
-    "github": {
+    "Jira": {
       "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "X-MCP-Toolsets": "default,copilot_spaces"
-      }
+      "url": "https://mcp.atlassian.com/v2/mcp"
     }
   }
 }
